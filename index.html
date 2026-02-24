@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe Nails | Premium Nail Art & Care</title>
-    <meta name="description" content="Shop the finest nail care products and artistic press-on sets. Elevate your style with Luxe Nails.">
+    <meta name="description"
+        content="Shop the finest nail care products and artistic press-on sets. Elevate your style with Luxe Nails.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav class="container nav-bar">
@@ -21,37 +26,46 @@
                 <li><a href="#">About</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="#" id="search-btn">🔍</a>
-                <a href="#" id="cart-btn">👜 <span class="cart-count">0</span></a>
+                <a href="#" id="search-btn">Search</a>
+                <a href="#" id="cart-btn">Cart <span class="cart-count">0</span></a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Content remains the same -->
+        <section class="hero reveal">
             <div class="container hero-content">
                 <div class="hero-text">
                     <h1>Artistry at Your <br><span>Fingertips</span></h1>
-                    <p>Discover our exclusive collection of premium nail care and handcrafted designs that define elegance.</p>
+                    <p>Discover our exclusive collection of premium nail care and handcrafted designs that define
+                        elegance.</p>
                     <a href="#shop" class="btn btn-primary">Shop the Collection</a>
                 </div>
                 <div class="hero-image">
-                    <img src="hero_nails_art.png" alt="Luxurious Nail Art Display">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000&auto=format&fit=crop"
+                        alt="Luxurious Nail Art Display">
                 </div>
             </div>
         </section>
 
         <section id="shop" class="products container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Featured Products</h2>
                 <div class="divider"></div>
             </div>
-            
+
             <div class="product-grid">
                 <!-- Product 1 -->
-                <div class="product-card">
+                <div class="product-card reveal">
                     <div class="product-img-wrapper">
-                        <div class="product-img placeholder-img">💅</div>
+                        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=500&auto=format&fit=crop"
+                            alt="Rose Quartz Polish" class="product-img">
                         <span class="badge">New</span>
                     </div>
                     <div class="product-info">
@@ -62,9 +76,10 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="product-card">
+                <div class="product-card reveal" style="transition-delay: 0.1s">
                     <div class="product-img-wrapper">
-                        <div class="product-img placeholder-img">✨</div>
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=500&auto=format&fit=crop"
+                            alt="Midnight Shimmer" class="product-img">
                     </div>
                     <div class="product-info">
                         <h3>Midnight Shimmer</h3>
@@ -74,9 +89,10 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="product-card">
+                <div class="product-card reveal" style="transition-delay: 0.2s">
                     <div class="product-img-wrapper">
-                        <div class="product-img placeholder-img">🌟</div>
+                        <img src="https://images.unsplash.com/photo-1600057424095-2cc675238241?q=80&w=500&auto=format&fit=crop"
+                            alt="Gold Leaf Kit" class="product-img">
                         <span class="badge sale">Sale</span>
                     </div>
                     <div class="product-info">
@@ -87,9 +103,10 @@
                 </div>
 
                 <!-- Product 4 -->
-                <div class="product-card">
+                <div class="product-card reveal" style="transition-delay: 0.3s">
                     <div class="product-img-wrapper">
-                        <div class="product-img placeholder-img">🎨</div>
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=500&auto=format&fit=crop"
+                            alt="Matte Lavender" class="product-img">
                     </div>
                     <div class="product-info">
                         <h3>Matte Lavender</h3>
@@ -100,11 +117,11 @@
             </div>
         </section>
 
-        <section class="newsletter">
+        <section class="newsletter reveal">
             <div class="container newsletter-box">
                 <h2>Join the Luxe List</h2>
                 <p>Subscribe for exclusive access to new launches and beauty tips.</p>
-                <form class="newsletter-form">
+                <form class="newsletter-form" id="newsletter-form">
                     <input type="email" placeholder="Your email address" required>
                     <button type="submit" class="btn btn-dark">Subscribe</button>
                 </form>
@@ -113,7 +130,7 @@
     </main>
 
     <footer>
-        <div class="container footer-content">
+        <div class="container footer-content reveal">
             <div class="footer-about">
                 <div class="logo">LUXE<span>NAILS</span></div>
                 <p>Crafting luxury for your nails since 2024. Quality and elegance in every drop.</p>
@@ -140,5 +157,8 @@
             <p>&copy; 2026 Luxe Nails. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
