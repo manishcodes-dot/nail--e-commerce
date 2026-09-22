@@ -269,7 +269,7 @@ export default function ShopPage({ onAddToCart }) {
                       onClick={() => toggleWishlist(product.id)}
                       aria-label="Wishlist"
                     >
-                      <Heart size={16} fill={isWishlisted ? '#E91E63' : 'none'} color={isWishlisted ? '#E91E63' : '#666'} />
+                      <Heart size={16} fill={isWishlisted ? '#C48B8B' : 'none'} color={isWishlisted ? '#C48B8B' : '#666'} />
                     </button>
                   </div>
                 </div>

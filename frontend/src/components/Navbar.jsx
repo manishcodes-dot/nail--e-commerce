@@ -70,15 +70,6 @@ export default function Navbar({ cartCount = 0, currentPage = 'home', onNavigate
                 Contact
               </a>
             </li>
-            <li>
-              <a
-                href="#pricing"
-                className={currentPage === 'shop' ? 'active' : ''}
-                onClick={(e) => handleNavClick(e, 'shop')}
-              >
-                PriceList
-              </a>
-            </li>
           </ul>
 
           <div className="nav-right">

@@ -994,19 +994,19 @@ footer.site-footer {
   font-size: 1.05rem;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  color: #E91E63;
+  color: var(--accent-pink);
 }
 
 .price-display {
   font-size: 0.85rem;
-  color: #E91E63;
+  color: var(--accent-pink);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .price-slider {
   width: 100%;
-  accent-color: #E91E63;
+  accent-color: var(--accent-pink);
   cursor: pointer;
 }
 
@@ -1026,7 +1026,7 @@ footer.site-footer {
 }
 
 .checkbox-row input {
-  accent-color: #E91E63;
+  accent-color: var(--accent-pink);
   width: 16px;
   height: 16px;
 }
@@ -1046,7 +1046,7 @@ footer.site-footer {
 
 .catalog-heading {
   font-size: 2.2rem;
-  color: #E91E63;
+  color: var(--accent-pink);
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -1158,7 +1158,7 @@ footer.site-footer {
 }
 
 .discount-tag {
-  color: #E91E63;
+  color: var(--accent-pink);
   font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 4px;
@@ -1185,7 +1185,7 @@ footer.site-footer {
 
 .offer-tag {
   font-size: 0.75rem;
-  color: #E91E63;
+  color: var(--accent-pink);
   margin-bottom: 8px;
 }
 
@@ -1207,7 +1207,7 @@ footer.site-footer {
 
 .add-to-cart-pink-btn {
   flex: 1;
-  background: #E91E63;
+  background: var(--accent-pink);
   color: #ffffff;
   border: none;
   padding: 10px 0;
@@ -1219,7 +1219,7 @@ footer.site-footer {
 }
 
 .add-to-cart-pink-btn:hover {
-  background: #d81b60;
+  background: #b07878;
   transform: translateY(-1px);
 }
 
@@ -1237,7 +1237,7 @@ footer.site-footer {
 }
 
 .wishlist-heart-btn:hover {
-  border-color: #E91E63;
+  border-color: var(--accent-pink);
 }
 
 @media (max-width: 1024px) {
