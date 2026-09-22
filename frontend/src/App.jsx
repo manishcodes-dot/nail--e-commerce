@@ -11,9 +11,11 @@ import ContactBooking from './components/ContactBooking.jsx';
 import WorkingHours from './components/WorkingHours.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import FAQSection from './components/FAQSection.jsx';
+import ShopPage from './components/ShopPage.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState('home');
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
@@ -34,19 +36,29 @@ export default function App() {
 
   return (
     <div className="app">
-      <Navbar cartCount={cart.length} />
+      <Navbar
+        cartCount={cart.length}
+        currentPage={currentPage}
+        onNavigate={(page) => setCurrentPage(page)}
+      />
       <main>
-        <Hero />
-        <AboutSection />
-        <ServicesSection />
-        <WhyChooseUs />
-        <DiscountBanner />
-        <SpecialistsSection />
-        <GalleryGrid />
-        <WorkingHours />
-        <ContactBooking />
-        <Testimonials />
-        <FAQSection />
+        {currentPage === 'shop' ? (
+          <ShopPage onAddToCart={handleAddToCart} />
+        ) : (
+          <>
+            <Hero />
+            <AboutSection />
+            <ServicesSection />
+            <WhyChooseUs />
+            <DiscountBanner />
+            <SpecialistsSection />
+            <GalleryGrid />
+            <WorkingHours />
+            <ContactBooking />
+            <Testimonials />
+            <FAQSection />
+          </>
+        )}
       </main>
       <Footer />
     </div>
