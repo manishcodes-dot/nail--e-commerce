@@ -2,28 +2,27 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="about-section">
-      <div className="container about-grid">
-        <div className="about-images-wrapper">
-          <img 
-            src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop" 
-            alt="Woman smiling showcasing nails" 
-            className="about-img-main"
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1600057424095-2cc675238241?q=80&w=600&auto=format&fit=crop" 
-            alt="Nail care treatment close up" 
-            className="about-img-secondary"
-          />
-        </div>
+    <section id="about" className="studio-section">
+      <div className="container">
+        <div className="studio-grid">
+          <div className="studio-text">
+            <span className="section-subtitle">The Art of Nails</span>
+            <h2>Crafting Timeless Beauty & Confidence</h2>
+            <p style={{ marginTop: '16px' }}>
+              At [Your Salon Name], we believe that beauty is an experience, not just a service. Our salon was created with the goal of providing a luxurious, welcoming space where every client can relax, refresh, and leave feeling confident and beautiful. From classic manicures and pedicures to innovative nail art and treatments, we offer a wide range of services tailored to suit your individual style and needs. Our team of skilled, passionate nail technicians is committed to delivering flawless results every time.
+            </p>
 
-        <div className="about-text">
-          <span className="section-subtitle">ABOUT LUXE</span>
-          <h2>Nails That Shine With Expert Care And True Artistic Creativity</h2>
-          <p>
-            Your nails deserve the best. At Luxe, every manicure and pedicure is performed with precision, using high-quality products that strengthen and protect. Whether you prefer a clean, natural finish or a statement-making design, our team ensures your nails stay beautiful, healthy, and strong.
-          </p>
-          <a href="#about" className="btn btn-black">More About Us</a>
+            <div style={{ marginTop: '36px' }}>
+              <a href="#services" className="btn btn-outline">See Our Services</a>
+            </div>
+          </div>
+
+          <div className="arch-frame" style={{ height: '420px' }}>
+            <img 
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" 
+              alt="Nail Art Close Up" 
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { ShoppingBag } from 'lucide-react';
 
-export default function Navbar({ cartCount }) {
+export default function Navbar({ cartCount = 0 }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -12,24 +13,32 @@ export default function Navbar({ cartCount }) {
   }, []);
 
   return (
-    <header className={scrolled ? 'scrolled' : ''}>
-      <nav className="container nav-bar">
-        <div className="logo">Luxe</div>
+    <>
+      <div className="side-tag-floating">Other Pages</div>
+      <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
+        <nav className="container nav-bar">
+          <a href="#" className="script-logo">Nails</a>
 
-        <ul className="nav-links">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#shop">Products</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-        </ul>
+          <ul className="nav-links">
+            <li><a href="#" className="active">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pricing">PriceList</a></li>
+          </ul>
 
-        <div className="nav-icons">
-          <a href="#shop" className="cart-btn">
-            Bag <span className="cart-count">{cartCount}</span>
-          </a>
-        </div>
-      </nav>
-    </header>
+          <div className="nav-right">
+            <a href="#contact" className="btn btn-outline" style={{ borderRadius: '50px', padding: '10px 24px' }}>
+              Get in touch
+            </a>
+            <a href="#shop" className="cart-icon-btn" aria-label="Shopping Bag">
+              <ShoppingBag size={18} />
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            </a>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

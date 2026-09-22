@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import FeatureBar from './components/FeatureBar.jsx';
 import AboutSection from './components/AboutSection.jsx';
-import PriceGuide from './components/PriceGuide.jsx';
-import ProductGrid from './components/ProductGrid.jsx';
-import GalleryBanner from './components/GalleryBanner.jsx';
+import ServicesSection from './components/ServicesSection.jsx';
+import WhyChooseUs from './components/WhyChooseUs.jsx';
+import DiscountBanner from './components/DiscountBanner.jsx';
 import SpecialistsSection from './components/SpecialistsSection.jsx';
+import GalleryGrid from './components/GalleryGrid.jsx';
+import ContactBooking from './components/ContactBooking.jsx';
+import WorkingHours from './components/WorkingHours.jsx';
 import Testimonials from './components/Testimonials.jsx';
+import FAQSection from './components/FAQSection.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
@@ -22,7 +25,7 @@ export default function App() {
           setProducts(data.data);
         }
       })
-      .catch((err) => console.log('Using local products fallback:', err));
+      .catch((err) => console.log('API fallback:', err));
   }, []);
 
   const handleAddToCart = (product) => {
@@ -34,13 +37,16 @@ export default function App() {
       <Navbar cartCount={cart.length} />
       <main>
         <Hero />
-        <FeatureBar />
         <AboutSection />
-        <PriceGuide />
-        <ProductGrid products={products} onAddToCart={handleAddToCart} />
-        <GalleryBanner />
+        <ServicesSection />
+        <WhyChooseUs />
+        <DiscountBanner />
         <SpecialistsSection />
+        <GalleryGrid />
+        <WorkingHours />
+        <ContactBooking />
         <Testimonials />
+        <FAQSection />
       </main>
       <Footer />
     </div>

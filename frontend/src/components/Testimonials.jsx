@@ -1,26 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const testimonials = [
+  {
+    quote: "Professional, creative, and so talented. I feel like my nails are little masterpieces every time I leave the salon.",
+    author: "Sarah",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    quote: "The best nail studio in town! The gel extensions last over 4 weeks without chipping. Highly recommended!",
+    author: "Elena R.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    quote: "Atmosphere is so relaxing and the technicians take so much care with detailing and hygiene.",
+    author: "Jessica M.",
+    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=600&auto=format&fit=crop"
+  }
+];
 
 export default function Testimonials() {
+  const [activeIdx, setActiveIdx] = useState(0);
+
   return (
-    <section className="testimonials-section">
-      <div className="container testimonial-box">
-        <span className="section-subtitle">TESTIMONIALS</span>
-        <h2 className="serif" style={{ fontSize: '2.5rem', marginBottom: '24px' }}>
-          What Our Clients Say?
-        </h2>
+    <section className="testimonials-section container">
+      <span className="section-subtitle">Testimonials</span>
+      <h2 className="section-title">Happy Clients, Happy Us</h2>
 
-        <div className="testimonial-stars">★★★★★</div>
-
-        <p className="testimonial-quote">
-          "My Luxe pedicure was such a relaxing experience from start to finish. The products felt soothing, and the polish was applied with incredible care. My feet felt softer, refreshed, and healthier than ever. The treatment lasted longer than expected, and the staff made me feel comfortable the entire visit."
-        </p>
-
-        <div className="avatar-group">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Client 1" />
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop" alt="Client 2" />
-          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=100&auto=format&fit=crop" alt="Client 3" />
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=100&auto=format&fit=crop" alt="Client 4" />
+      <div className="testimonial-card-grid">
+        <div className="testimonial-arch-img">
+          <div className="arch-frame" style={{ height: '100%' }}>
+            <img src={testimonials[activeIdx].image} alt={testimonials[activeIdx].author} />
+          </div>
         </div>
+
+        <div className="testimonial-content">
+          <p className="quote-text">"{testimonials[activeIdx].quote}"</p>
+          <p className="author-name">— {testimonials[activeIdx].author}</p>
+        </div>
+      </div>
+
+      <div className="dots-pagination">
+        {testimonials.map((_, i) => (
+          <div
+            key={i}
+            className={`dot ${activeIdx === i ? 'active' : ''}`}
+            onClick={() => setActiveIdx(i)}
+          />
+        ))}
       </div>
     </section>
   );
