@@ -7,7 +7,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="site-footer">
+    <footer id="footer" className="site-footer">
       <div className="container">
         <div className="footer-grid-4">
           <div className="footer-brand">

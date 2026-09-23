@@ -66,7 +66,7 @@ export default function Navbar({ cartCount = 0, currentPage = 'home', onNavigate
               </a>
             </li>
             <li>
-              <a href="#contact" onClick={(e) => handleNavClick(e, 'home', '#contact')}>
+              <a href="#footer" onClick={(e) => handleNavClick(e, 'home', '#footer')}>
                 Contact
               </a>
             </li>
@@ -74,10 +74,10 @@ export default function Navbar({ cartCount = 0, currentPage = 'home', onNavigate
 
           <div className="nav-right">
             <a
-              href="#contact"
+              href="#footer"
               className="btn btn-outline"
               style={{ borderRadius: '50px', padding: '10px 24px' }}
-              onClick={(e) => handleNavClick(e, 'home', '#contact')}
+              onClick={(e) => handleNavClick(e, 'home', '#footer')}
             >
               Get in touch
             </a>

@@ -7,7 +7,6 @@ import WhyChooseUs from './components/WhyChooseUs.jsx';
 import DiscountBanner from './components/DiscountBanner.jsx';
 import SpecialistsSection from './components/SpecialistsSection.jsx';
 import GalleryGrid from './components/GalleryGrid.jsx';
-import ContactBooking from './components/ContactBooking.jsx';
 import WorkingHours from './components/WorkingHours.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import FAQSection from './components/FAQSection.jsx';
@@ -54,7 +53,6 @@ export default function App() {
             <SpecialistsSection />
             <GalleryGrid />
             <WorkingHours />
-            <ContactBooking />
             <Testimonials />
             <FAQSection />
           </>
@@ -64,3 +62,4 @@ export default function App() {
     </div>
   );
 }
+
